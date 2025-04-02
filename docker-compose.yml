@@ -1,0 +1,38 @@
+version: '3.7'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: project_db_85022  # เปลี่ยนชื่อ container
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: webdb
+    ports:
+      - "9200:3306"  # เปลี่ยนพอร์ต
+    volumes:
+      - mysql_data_850:/var/lib/mysql  # เปลี่ยนชื่อ volume
+    networks:
+      - weblab850
+    restart: always
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin_project22  # เปลี่ยนชื่อ container
+    environment:
+      PMA_HOST: project_db_85022  # ใช้ชื่อใหม่ของ MySQL container
+    ports:
+      - "9898:80"  # เปลี่ยนพอร์ต
+    depends_on:
+      - db
+    networks:
+      - weblab850
+    restart: always
+
+networks:
+  weblab850:
+    driver: bridge
+
+volumes:
+  mysql_data_850:
+    driver: local  # เปลี่ยนชื่อ volume
