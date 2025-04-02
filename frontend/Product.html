@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายการสินค้า</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="Product.css">
+
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2><i class="fas fa-store"></i> POS System</h2>
+        <ul>
+            <li><a href="login.html"><i class="fas fa-home"></i> หน้าแรก</a></li>
+            <li><a href=""><i class="fas fa-box"></i> รายการสินค้า</a></li>
+            <li><a href="stock.html"><i class="fas fa-cog"></i> คลังสินค้า</a></li>
+            <li><a href="cus.html"><i class="fas fa-user"></i> ระบบสมาชิกลูกค้า</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="dashboard-header">
+            <h1><i class="fas fa-box"></i> รายการสินค้า</h1>
+
+        </div>
+
+        <div class="category-buttons">
+            <button onclick="filterCategory('all')">ทั้งหมด</button>
+            <button onclick="filterCategory('drinks')">เครื่องดื่ม</button>
+            <button onclick="filterCategory('snacks')">ขนม</button>
+            <button onclick="filterCategory('dry-food')">อาหารแห้ง</button>
+            <button onclick="filterCategory('utilities')">ของใช้</button>
+        </div>
+
+        <div id="product-list">
+            <div class="category drinks active">
+                <h2><i class="fas fa-coffee"></i> เครื่องดื่ม</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/th-11134201-7r98s-loanro9w40s2b7.webp"
+                            alt="น้ำเปล่าคริสตัล">
+                        <h3>น้ำเปล่าคริสตัล</h3>
+                        <p>7.00 บาท</p>
+                        <p>รหัสสินค้า A001</p>
+                        <button class="add-to-cart" onclick="addToCart('น้ำเปล่าคริสตัล', 7)">เพิ่มลงตะกร้า</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/th-11134201-7r98s-loanro9w40s2b7.webp"
+                            alt="น้ำเปล่าคริสตัล">
+                        <h3>น้ำเปล่าคริสตัล</h3>
+                        <p>7.00 บาท</p>
+                        <p>รหัสสินค้า A001</p>
+                        <button class="add-to-cart" onclick="addToCart('น้ำเปล่าคริสตัล', 7)">เพิ่มลงตะกร้า</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/th-11134201-7r98s-loanro9w40s2b7.webp"
+                            alt="น้ำเปล่าคริสตัล">
+                        <h3>น้ำเปล่าคริสตัล</h3>
+                        <p>7.00 บาท</p>
+                        <p>รหัสสินค้า A001</p>
+                        <button class="add-to-cart" onclick="addToCart('น้ำเปล่าคริสตัล', 7)">เพิ่มลงตะกร้า</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/th-11134201-7r98s-loanro9w40s2b7.webp"
+                            alt="น้ำเปล่าคริสตัล">
+                        <h3>น้ำเปล่าคริสตัล</h3>
+                        <p>7.00 บาท</p>
+                        <p>รหัสสินค้า A001</p>
+                        <button class="add-to-cart" onclick="addToCart('น้ำเปล่าคริสตัล', 7)">เพิ่มลงตะกร้า</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/th-11134201-7r98s-loanro9w40s2b7.webp"
+                            alt="น้ำเปล่าคริสตัล">
+                        <h3>น้ำเปล่าคริสตัล</h3>
+                        <p>7.00 บาท</p>
+                        <p>รหัสสินค้า A001</p>
+                        <button class="add-to-cart" onclick="addToCart('น้ำเปล่าคริสตัล', 7)">เพิ่มลงตะกร้า</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/th-11134201-7r98s-loanro9w40s2b7.webp"
+                            alt="น้ำเปล่าคริสตัล">
+                        <h3>น้ำเปล่าคริสตัล</h3>
+                        <p>7.00 บาท</p>
+                        <p>รหัสสินค้า A001</p>
+                        <button class="add-to-cart" onclick="addToCart('น้ำเปล่าคริสตัล', 7)">เพิ่มลงตะกร้า</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/th-11134201-7r98s-loanro9w40s2b7.webp"
+                            alt="น้ำเปล่าคริสตัล">
+                        <h3>น้ำเปล่าคริสตัล</h3>
+                        <p>7.00 บาท</p>
+                        <p>รหัสสินค้า A001</p>
+                        <button class="add-to-cart" onclick="addToCart('น้ำเปล่าคริสตัล', 7)">เพิ่มลงตะกร้า</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/th-11134201-7r98s-loanro9w40s2b7.webp"
+                            alt="น้ำเปล่าคริสตัล">
+                        <h3>น้ำเปล่าคริสตัล</h3>
+                        <p>7.00 บาท</p>
+                        <p>รหัสสินค้า A001</p>
+                        <button class="add-to-cart" onclick="addToCart('น้ำเปล่าคริสตัล', 7)">เพิ่มลงตะกร้า</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/th-11134201-7r98s-loanro9w40s2b7.webp"
+                            alt="น้ำเปล่าคริสตัล">
+                        <h3>น้ำเปล่าคริสตัล</h3>
+                        <p>7.00 บาท</p>
+                        <p>รหัสสินค้า A001</p>
+                        <button class="add-to-cart" onclick="addToCart('น้ำเปล่าคริสตัล', 7)">เพิ่มลงตะกร้า</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/th-11134201-7r98s-loanro9w40s2b7.webp"
+                            alt="น้ำเปล่าคริสตัล">
+                        <h3>น้ำเปล่าคริสตัล</h3>
+                        <p>7.00 บาท</p>
+                        <p>รหัสสินค้า A001</p>
+                        <button class="add-to-cart" onclick="addToCart('น้ำเปล่าคริสตัล', 7)">เพิ่มลงตะกร้า</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/th-11134201-7r98s-loanro9w40s2b7.webp"
+                            alt="น้ำเปล่าคริสตัล">
+                        <h3>น้ำเปล่าคริสตัล</h3>
+                        <p>7.00 บาท</p>
+                        <p>รหัสสินค้า A001</p>
+                        <button class="add-to-cart" onclick="addToCart('น้ำเปล่าคริสตัล', 7)">เพิ่มลงตะกร้า</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/th-11134201-7r98s-loanro9w40s2b7.webp"
+                            alt="น้ำเปล่าคริสตัล">
+                        <h3>น้ำเปล่าคริสตัล</h3>
+                        <p>7.00 บาท</p>
+                        <p>รหัสสินค้า A001</p>
+                        <button class="add-to-cart" onclick="addToCart('น้ำเปล่าคริสตัล', 7)">เพิ่มลงตะกร้า</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/th-11134201-7r98s-loanro9w40s2b7.webp"
+                            alt="น้ำเปล่าคริสตัล">
+                        <h3>น้ำเปล่าคริสตัล</h3>
+                        <p>7.00 บาท</p>
+                        <p>รหัสสินค้า A001</p>
+                        <button class="add-to-cart" onclick="addToCart('น้ำเปล่าคริสตัล', 7)">เพิ่มลงตะกร้า</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/th-11134201-7r98s-loanro9w40s2b7.webp"
+                            alt="น้ำเปล่าคริสตัล">
+                        <h3>น้ำเปล่าคริสตัล</h3>
+                        <p>7.00 บาท</p>
+                        <p>รหัสสินค้า A001</p>
+                        <button class="add-to-cart" onclick="addToCart('น้ำเปล่าคริสตัล', 7)">เพิ่มลงตะกร้า</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/th-11134201-7r98s-loanro9w40s2b7.webp"
+                            alt="น้ำเปล่าคริสตัล">
+                        <h3>น้ำเปล่าคริสตัล</h3>
+                        <p>7.00 บาท</p>
+                        <p>รหัสสินค้า A001</p>
+                        <button class="add-to-cart" onclick="addToCart('น้ำเปล่าคริสตัล', 7)">เพิ่มลงตะกร้า</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="product-list">
+            <div class="category snacks active">
+                <h2><i class="fas fa-cookie"></i> ขนม</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/0ed279b1b85f0717d1bc3b98df045ba3"
+                            alt="บิสกิต">
+                        <h3>บิสกิต</h3>
+                        <p>15.00 บาท</p>
+                        <p>รหัสสินค้า S001</p>
+                        <button class="add-to-cart" onclick="addToCart('บิสกิต', 15)">เพิ่มลงตะกร้า</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/5919028e3a3c0ff4826b2d76b55c5aaf"
+                            alt="เวเฟอร์ช็อกโกแลต">
+                        <h3>เวเฟอร์ช็อกโกแลต</h3>
+                        <p>20.00 บาท</p>
+                        <p>รหัสสินค้า S002</p>
+                        <button class="add-to-cart" onclick="addToCart('เวเฟอร์ช็อกโกแลต', 20)">เพิ่มลงตะกร้า</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/0ed279b1b85f0717d1bc3b98df045ba3"
+                            alt="บิสกิต">
+                        <h3>บิสกิต</h3>
+                        <p>15.00 บาท</p>
+                        <p>รหัสสินค้า S001</p>
+                        <button class="add-to-cart" onclick="addToCart('บิสกิต', 15)">เพิ่มลงตะกร้า</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/abcd1234efgh5678ijkl" alt="มันฝรั่งทอด">
+                        <h3>มันฝรั่งทอด</h3>
+                        <p>20.00 บาท</p>
+                        <p>รหัสสินค้า S002</p>
+                        <button class="add-to-cart" onclick="addToCart('มันฝรั่งทอด', 20)">เพิ่มลงตะกร้า</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/ijkl5678mnop1234qrst" alt="ข้าวโพดอบกรอบ">
+                        <h3>ข้าวโพดอบกรอบ</h3>
+                        <p>18.00 บาท</p>
+                        <p>รหัสสินค้า S003</p>
+                        <button class="add-to-cart" onclick="addToCart('ข้าวโพดอบกรอบ', 18)">เพิ่มลงตะกร้า</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/qrst1234uvwx5678yzab" alt="ปลาเส้น">
+                        <h3>ปลาเส้น</h3>
+                        <p>25.00 บาท</p>
+                        <p>รหัสสินค้า S004</p>
+                        <button class="add-to-cart" onclick="addToCart('ปลาเส้น', 25)">เพิ่มลงตะกร้า</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/uvwx5678abcd1234efgh" alt="หมึกอบกรอบ">
+                        <h3>หมึกอบกรอบ</h3>
+                        <p>30.00 บาท</p>
+                        <p>รหัสสินค้า S005</p>
+                        <button class="add-to-cart" onclick="addToCart('หมึกอบกรอบ', 30)">เพิ่มลงตะกร้า</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/efgh1234ijkl5678mnop" alt="สาหร่ายอบกรอบ">
+                        <h3>สาหร่ายอบกรอบ</h3>
+                        <p>22.00 บาท</p>
+                        <p>รหัสสินค้า S006</p>
+                        <button class="add-to-cart" onclick="addToCart('สาหร่ายอบกรอบ', 22)">เพิ่มลงตะกร้า</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/mnop5678qrst1234uvwx" alt="ขาไก่ทอดกรอบ">
+                        <h3>ขาไก่ทอดกรอบ</h3>
+                        <p>35.00 บาท</p>
+                        <p>รหัสสินค้า S007</p>
+                        <button class="add-to-cart" onclick="addToCart('ขาไก่ทอดกรอบ', 35)">เพิ่มลงตะกร้า</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/yzab1234cdef5678ghij" alt="ถั่วลิสงเคลือบ">
+                        <h3>ถั่วลิสงเคลือบ</h3>
+                        <p>28.00 บาท</p>
+                        <p>รหัสสินค้า S008</p>
+                        <button class="add-to-cart" onclick="addToCart('ถั่วลิสงเคลือบ', 28)">เพิ่มลงตะกร้า</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://down-th.img.susercontent.com/file/cdef5678ijkl1234mnop"
+                            alt="เม็ดมะม่วงหิมพานต์อบ">
+                        <h3>เม็ดมะม่วงหิมพานต์อบ</h3>
+                        <p>40.00 บาท</p>
+                        <p>รหัสสินค้า S009</p>
+                        <button class="add-to-cart"
+                            onclick="addToCart('เม็ดมะม่วงหิมพานต์อบ', 40)">เพิ่มลงตะกร้า</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="product-list">
+            <!-- อาหารแห้ง -->
+            <div class="category dry-food active">
+                <h2><i class="fas fa-bread-slice"></i> อาหารแห้ง</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://example.com/dried-food1.jpg" alt="ข้าวเกรียบ">
+                        <h3>ข้าวเกรียบ</h3>
+                        <p>25.00 บาท</p>
+                        <p>รหัสสินค้า D001</p>
+                        <button class="add-to-cart" onclick="addToCart('ข้าวเกรียบ', 25)">เพิ่มลงตะกร้า</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="" alt="แหนม">
+                        <h3>แหนม</h3>
+                        <p>30.00 บาท</p>
+                        <p>รหัสสินค้า D002</p>
+                        <button class="add-to-cart" onclick="addToCart('แหนม', 30)">เพิ่มลงตะกร้า</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://example.com/dried-food1.jpg" alt="ข้าวเกรียบ">
+                        <h3>ข้าวเกรียบ</h3>
+                        <p>25.00 บาท</p>
+                        <p>รหัสสินค้า D001</p>
+                        <button class="add-to-cart" onclick="addToCart('ข้าวเกรียบ', 25)">เพิ่มลงตะกร้า</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://example.com/dried-food2.jpg" alt="หมูแผ่น">
+                        <h3>หมูแผ่น</h3>
+                        <p>35.00 บาท</p>
+                        <p>รหัสสินค้า D002</p>
+                        <button class="add-to-cart" onclick="addToCart('หมูแผ่น', 35)">เพิ่มลงตะกร้า</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://example.com/dried-food3.jpg" alt="หมึกแห้ง">
+                        <h3>หมึกแห้ง</h3>
+                        <p>50.00 บาท</p>
+                        <p>รหัสสินค้า D003</p>
+                        <button class="add-to-cart" onclick="addToCart('หมึกแห้ง', 50)">เพิ่มลงตะกร้า</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://example.com/dried-food4.jpg" alt="ปลาหวาน">
+                        <h3>ปลาหวาน</h3>
+                        <p>45.00 บาท</p>
+                        <p>รหัสสินค้า D004</p>
+                        <button class="add-to-cart" onclick="addToCart('ปลาหวาน', 45)">เพิ่มลงตะกร้า</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://example.com/dried-food5.jpg" alt="กุนเชียง">
+                        <h3>กุนเชียง</h3>
+                        <p>60.00 บาท</p>
+                        <p>รหัสสินค้า D005</p>
+                        <button class="add-to-cart" onclick="addToCart('กุนเชียง', 60)">เพิ่มลงตะกร้า</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://example.com/dried-food6.jpg" alt="เนื้อแดดเดียว">
+                        <h3>เนื้อแดดเดียว</h3>
+                        <p>70.00 บาท</p>
+                        <p>รหัสสินค้า D006</p>
+                        <button class="add-to-cart" onclick="addToCart('เนื้อแดดเดียว', 70)">เพิ่มลงตะกร้า</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://example.com/dried-food7.jpg" alt="กุ้งแห้ง">
+                        <h3>กุ้งแห้ง</h3>
+                        <p>80.00 บาท</p>
+                        <p>รหัสสินค้า D007</p>
+                        <button class="add-to-cart" onclick="addToCart('กุ้งแห้ง', 80)">เพิ่มลงตะกร้า</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://example.com/dried-food8.jpg" alt="ปลาร้าแห้ง">
+                        <h3>ปลาร้าแห้ง</h3>
+                        <p>55.00 บาท</p>
+                        <p>รหัสสินค้า D008</p>
+                        <button class="add-to-cart" onclick="addToCart('ปลาร้าแห้ง', 55)">เพิ่มลงตะกร้า</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://example.com/dried-food9.jpg" alt="ปลาอินทรีย์เค็ม">
+                        <h3>ปลาอินทรีย์เค็ม</h3>
+                        <p>90.00 บาท</p>
+                        <p>รหัสสินค้า D009</p>
+                        <button class="add-to-cart" onclick="addToCart('ปลาอินทรีย์เค็ม', 90)">เพิ่มลงตะกร้า</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="product-list">
+                <!-- ของใช้ -->
+                <div class="category utilities active">
+                    <h2><i class="fas fa-bath"></i> ของใช้</h2>
+                    <div class="product-grid">
+                        <!-- แปรงสีฟัน -->
+                        <div class="product-card">
+                            <img src="https://example.com/toothbrush.jpg" alt="แปรงสีฟัน">
+                            <h3>แปรงสีฟัน</h3>
+                            <p>15.00 บาท</p>
+                            <p>รหัสสินค้า U001</p>
+                            <button class="add-to-cart" onclick="addToCart('แปรงสีฟัน', 15)">เพิ่มลงตะกร้า</button>
+                        </div>
+                        <!-- สบู่ -->
+                        <div class="product-card">
+                            <img src="https://example.com/soap.jpg" alt="สบู่">
+                            <h3>สบู่</h3>
+                            <p>20.00 บาท</p>
+                            <p>รหัสสินค้า U002</p>
+                            <button class="add-to-cart" onclick="addToCart('สบู่', 20)">เพิ่มลงตะกร้า</button>
+                        </div>
+                        <!-- ผ้าเช็ดตัว -->
+                        <div class="product-card">
+                            <img src="https://example.com/towel.jpg" alt="ผ้าเช็ดตัว">
+                            <h3>ผ้าเช็ดตัว</h3>
+                            <p>50.00 บาท</p>
+                            <p>รหัสสินค้า U003</p>
+                            <button class="add-to-cart" onclick="addToCart('ผ้าเช็ดตัว', 50)">เพิ่มลงตะกร้า</button>
+                        </div>
+                        <!-- ถุงขยะ -->
+                        <div class="product-card">
+                            <img src="https://example.com/trash-bag.jpg" alt="ถุงขยะ">
+                            <h3>ถุงขยะ</h3>
+                            <p>10.00 บาท</p>
+                            <p>รหัสสินค้า U004</p>
+                            <button class="add-to-cart" onclick="addToCart('ถุงขยะ', 10)">เพิ่มลงตะกร้า</button>
+                        </div>
+                        <!-- น้ำยาล้างจาน -->
+                        <div class="product-card">
+                            <img src="https://example.com/dishwashing-liquid.jpg" alt="น้ำยาล้างจาน">
+                            <h3>น้ำยาล้างจาน</h3>
+                            <p>25.00 บาท</p>
+                            <p>รหัสสินค้า U005</p>
+                            <button class="add-to-cart" onclick="addToCart('น้ำยาล้างจาน', 25)">เพิ่มลงตะกร้า</button>
+                        </div>
+                        <!-- ยาสีฟัน -->
+                        <div class="product-card">
+                            <img src="https://example.com/toothpaste.jpg" alt="ยาสีฟัน">
+                            <h3>ยาสีฟัน</h3>
+                            <p>30.00 บาท</p>
+                            <p>รหัสสินค้า U006</p>
+                            <button class="add-to-cart" onclick="addToCart('ยาสีฟัน', 30)">เพิ่มลงตะกร้า</button>
+                        </div>
+
+                        <!-- แชมพู -->
+                        <div class="product-card">
+                            <img src="https://example.com/shampoo.jpg" alt="แชมพู">
+                            <h3>แชมพู</h3>
+                            <p>40.00 บาท</p>
+                            <p>รหัสสินค้า U007</p>
+                            <button class="add-to-cart" onclick="addToCart('แชมพู', 40)">เพิ่มลงตะกร้า</button>
+                        </div>
+
+                        <!-- กระดาษทิชชู่ -->
+                        <div class="product-card">
+                            <img src="https://example.com/tissue.jpg" alt="กระดาษทิชชู่">
+                            <h3>กระดาษทิชชู่</h3>
+                            <p>35.00 บาท</p>
+                            <p>รหัสสินค้า U008</p>
+                            <button class="add-to-cart" onclick="addToCart('กระดาษทิชชู่', 35)">เพิ่มลงตะกร้า</button>
+                        </div>
+
+                        <!-- ผงซักฟอก -->
+                        <div class="product-card">
+                            <img src="https://example.com/detergent.jpg" alt="ผงซักฟอก">
+                            <h3>ผงซักฟอก</h3>
+                            <p>45.00 บาท</p>
+                            <p>รหัสสินค้า U009</p>
+                            <button class="add-to-cart" onclick="addToCart('ผงซักฟอก', 45)">เพิ่มลงตะกร้า</button>
+                        </div>
+
+                        <!-- น้ำยาปรับผ้านุ่ม -->
+                        <div class="product-card">
+                            <img src="https://example.com/fabric-softener.jpg" alt="น้ำยาปรับผ้านุ่ม">
+                            <h3>น้ำยาปรับผ้านุ่ม</h3>
+                            <p>50.00 บาท</p>
+                            <p>รหัสสินค้า U010</p>
+                            <button class="add-to-cart"
+                                onclick="addToCart('น้ำยาปรับผ้านุ่ม', 50)">เพิ่มลงตะกร้า</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Cart Modal -->
+        <div id="cart-modal">
+            <div>
+                <h2>ตะกร้าสินค้า</h2>
+                <ul id="cart-items"></ul>
+                <p>ยอดรวม: <span id="total-price">0</span> บาท</p>
+                <button class="pay-cash" onclick="payCash()">ชำระเงินสด</button>
+                <button class="pay-scan" onclick="showQRCode()">ชำระผ่าน QR</button>
+                <img id="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=ชำระเงิน"
+                    alt="QR Code">
+                <button onclick="closeCart()">ปิด</button>
+            </div>
+        </div>
+
+        <script>
+            let cart = [];
+
+            // Function to add item to the cart
+            function addToCart(name, price) {
+                cart.push({ name, price });
+                updateCart();
+                document.getElementById("cart-modal").style.display = "flex";
+            }
+
+            // Function to remove item from the cart
+            function removeFromCart(index) {
+                cart.splice(index, 1);  // Remove the item at the given index
+                updateCart();  // Update the cart display
+            }
+
+            // Function to update the cart display
+            function updateCart() {
+                let cartList = document.getElementById("cart-items");
+                let totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
+                cartList.innerHTML = cart.map((item, index) => `
+                <li>
+                    ${item.name} - ${item.price} บาท
+                    <button onclick="removeFromCart(${index})">ลบ</button>
+                </li>
+            `).join('');
+                document.getElementById("total-price").innerText = totalPrice;
+            }
+
+            // Function to close the cart modal
+            function closeCart() {
+                document.getElementById("cart-modal").style.display = "none";
+                document.getElementById("qr-code").style.display = "none";
+            }
+
+            // Function for cash payment
+            function payCash() {
+                let total = cart.reduce((sum, item) => sum + item.price, 0);
+                let cash = prompt("กรุณาใส่จำนวนเงินที่รับมา:");
+                if (cash !== null) {
+                    cash = parseFloat(cash);
+                    if (cash >= total) {
+                        alert("ชำระเงินสำเร็จ! เงินทอน: " + (cash - total) + " บาท");
+                        cart = [];
+                        updateCart();
+                        closeCart();
+                    } else {
+                        alert("เงินไม่พอ กรุณาใส่จำนวนเงินที่ถูกต้อง");
+                    }
+                }
+            }
+
+            // Function to display QR code for payment
+            function showQRCode() {
+                document.getElementById("qr-code").style.display = "block";
+            }
+
+            // Function to filter products by category
+            function filterCategory(category) {
+                let categories = document.querySelectorAll('.category');
+                categories.forEach(cat => {
+                    if (category === 'all' || cat.classList.contains(category)) {
+                        cat.classList.add('active');
+                    } else {
+                        cat.classList.remove('active');
+                    }
+                });
+            }
+        </script>
+</body>
+
+</html>

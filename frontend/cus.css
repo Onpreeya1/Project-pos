@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+}
+
+.sidebar {
+    width: 250px;
+    background: #333;
+    padding-top: 20px;
+    position: fixed;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+.sidebar ul li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.container {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+    height: 100%;
+    overflow-y: auto; 
+}
+
+
+/* พื้นที่เนื้อหา */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+
+/* กล่องเนื้อหา */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* หัวข้อ */
+h2 {
+    text-align: center;
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #333;
+}
+
+/* ปรับแต่งช่องค้นหา */
+#search {
+    width: 70%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+button[onclick="searchMember()"] {
+    width: 80px;
+    padding: 8px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+button[onclick="searchMember()"]:hover {
+    background-color: #e64a19;
+}
+
+/* ปุ่มเพิ่มสมาชิก */
+button[onclick="submitData()"] {
+    width: 80px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin: 10px auto;
+}
+
+button[onclick="submitData()"]:hover {
+    background-color: #e64a19;
+}
+
+/* อินพุต & ปุ่ม */
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* ตารางสมาชิก */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #ff5722;
+    color: white;
+}
+
+/* ปุ่มลบ */
+.delete-btn {
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* ทำให้ responsive */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+
+    #search {
+        width: 100%;
+    }
+
+    button[onclick="searchMember()"] {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
